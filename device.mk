@@ -257,8 +257,7 @@ PRODUCT_PACKAGES += \
 
 # Media
 PRODUCT_PACKAGES += \
-    android.hardware.media.omx@1.0-service \
-    vendor.qti.media.c2@1.0-service
+    android.hardware.media.omx@1.0-service
 
 PRODUCT_PACKAGES += \
     libavservices_minijail \
@@ -307,8 +306,6 @@ PRODUCT_PACKAGES += \
     libOmxEvrcEnc \
     libOmxG711Enc \
     libOmxQcelp13Enc \
-    libOmxVdec \
-    libOmxVenc \
     libstagefrighthw \
     libstagefright_omx \
     libstagefright_foundation \
