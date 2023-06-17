@@ -322,30 +322,14 @@ PRODUCT_PACKAGES += \
     FrameworksResOverlayVeux \
     SettingsOverlayVeux \
     SettingsProviderOverlayVeux \
-    SettingsProviderOverlayS88006AA1 \
-    SettingsProviderOverlayS88007AA1 \
-    SettingsProviderOverlayS88007EA1 \
-    SettingsProviderOverlayS88008BA1 \
-    SettingsProviderOverlayS88106BA1 \
-    SettingsProviderOverlayS88107BA1 \
     SystemUIOverlayVeux \
     SimpleDeviceConfigOverlayVeux \
     TelephonyOverlayVeux \
-    WifiOverlayVeux \
-    WifiOverlayS88006AA1 \
-    WifiOverlayS88007AA1 \
-    WifiOverlayS88007EA1 \
-    WifiOverlayS88008BA1 \
-    WifiOverlayS88106BA1 \
-    WifiOverlayS88107BA1
+    WifiOverlayVeux
 
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
-
-# Parts
-PRODUCT_PACKAGES += \
-    XiaomiParts
 
 # Perf
 PRODUCT_PACKAGES += \
@@ -559,4 +543,4 @@ PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/wifi/,$(TARGET_COPY_OUT_VENDOR)/etc/wifi)
 
 # Get non-open-source specific aspects
-$(call inherit-product, vendor/xiaomi/veux/veux-vendor.mk)
+$(call inherit-product, vendor/xiaomi/moonstone/moonstone-vendor.mk)

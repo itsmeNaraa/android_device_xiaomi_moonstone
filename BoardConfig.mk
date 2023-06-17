@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/xiaomi/veux
+DEVICE_PATH := device/xiaomi/moonstone
 
 # A/B
 AB_OTA_UPDATER := true
@@ -74,13 +74,8 @@ LOC_HIDL_VERSION := 4.0
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/configs/hidl/compatibility_matrix.xml
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/hidl/manifest.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(DEVICE_PATH)/configs/hidl/framework_compatibility_matrix.xml
-
 ODM_MANIFEST_SKUS += nfc
 ODM_MANIFEST_NFC_FILES := $(DEVICE_PATH)/configs/hidl/manifest_nfc.xml
-
-# Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):init_xiaomi_veux
-TARGET_RECOVERY_DEVICE_MODULES := init_xiaomi_veux
 
 # Kernel
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
@@ -95,7 +90,7 @@ BOARD_BOOT_HEADER_VERSION := 3
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 
 TARGET_KERNEL_ADDITIONAL_FLAGS := DTC_EXT=$(shell pwd)/prebuilts/misc/linux-x86/dtc/dtc LLVM=1
-TARGET_KERNEL_SOURCE := kernel/xiaomi/sm6375
+TARGET_KERNEL_SOURCE := kernel/xiaomi/moonstone
 
 BOARD_KERNEL_CMDLINE += androidboot.hardware=qcom
 BOARD_KERNEL_CMDLINE += androidboot.memcg=1
@@ -223,5 +218,4 @@ WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit from the proprietary version
-include vendor/xiaomi/veux/BoardConfigVendor.mk
-include vendor/xiaomi/veux-firmware/BoardConfigVendor.mk
+include vendor/xiaomi/moonstone/BoardConfigVendor.mk

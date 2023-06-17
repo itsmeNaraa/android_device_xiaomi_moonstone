@@ -7,7 +7,7 @@
 
 set -e
 
-DEVICE=veux
+DEVICE=moonstone
 VENDOR=xiaomi
 
 # Load extract_utils and do some sanity checks
